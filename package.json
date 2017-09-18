@@ -1,0 +1,35 @@
+{
+  "name": "react-project-scaffold",
+  "version": "1.0.0",
+  "description": "Empty full-stack React project template files to reference.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify index.js -o main.js -t babelify",
+    "bundle:watch": "watchify -v -d -t babelify index.js -o main.js",
+    "watch:server": "nodemon server/index.js --ignore server/public/**",
+    "watch": "run-p watch:client watch:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincelavang/react-project-scaffold.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vincelavang/react-project-scaffold/issues"
+  },
+  "homepage": "https://github.com/vincelavang/react-project-scaffold#readme",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
